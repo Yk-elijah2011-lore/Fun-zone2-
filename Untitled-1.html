@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Website</title>
+    <link rel="stylesheet" href="retro-style.css">
+</head>
+<body>
+    <main class="cabinet">
+        <section class="screen content-screen">
+            <div class="hud"><span>1UP 000000</span><span>PAGE 01 / 08</span></div>
+            <h1 class="content-heading">PICTURE ZONE</h1>
+            <label class="image-upload" for="pictureInput">INSERT PICTURE</label>
+            <input id="pictureInput" class="file-input" type="file" accept="image/*">
+            <div class="image-space"><img id="picturePreview" class="image-preview" alt="Your selected picture preview"></div>
+            <p class="hint">CHOOSE A PICTURE FROM YOUR COMPUTER</p>
+            <nav class="pager"><a href="Welcome.html">◀ BACK</a></nav>
+        </section>
+    </main>
+    <script>
+        const pictureInput = document.querySelector("#pictureInput");
+        const picturePreview = document.querySelector("#picturePreview");
+
+        pictureInput.addEventListener("change", () => {
+            const picture = pictureInput.files[0];
+            if (picture) picturePreview.src = URL.createObjectURL(picture);
+        });
+    </script>
+</body>
+</html>

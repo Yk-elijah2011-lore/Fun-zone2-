@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="retro-style.css">
+</head>
+<body>
+    <main class="cabinet"><section class="screen content-screen">
+        <div class="hud"><span>1UP 000000</span><span>PAGE 02 / 08</span></div>
+        <h1 class="content-heading">VIDEO ZONE</h1>
+        <label class="video-upload" for="videoInput">INSERT VIDEO</label>
+        <input id="videoInput" class="file-input" type="file" accept="video/*">
+        <div class="video-space" id="videoSpace" role="region" aria-label="Video space">
+            <span>VIDEO GOES HERE</span>
+            <video id="videoPreview" class="video-preview" controls aria-label="Your selected video preview"></video>
+        </div>
+        <p class="hint">CHOOSE A VIDEO FROM YOUR COMPUTER</p>
+        <nav class="pager"><a href="Untitled-1.html">◀ BACK</a><a href="Page-3.html">NEXT ▶</a></nav>
+    </section></main>
+    <script>
+        const videoInput = document.querySelector("#videoInput");
+        const videoSpace = document.querySelector("#videoSpace");
+        const videoPreview = document.querySelector("#videoPreview");
+
+        videoInput.addEventListener("change", () => {
+            const video = videoInput.files[0];
+            if (!video) return;
+            videoPreview.src = URL.createObjectURL(video);
+            videoSpace.classList.add("has-video");
+        });
+    </script>
+</body>
+</html>
