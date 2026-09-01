@@ -7,7 +7,18 @@
         <link rel="stylesheet" href="retro-style.css">
         <style>
             body{
-                background-image: url(46d46d583fcef5817304483b6de19b77.webp)
+                background-image: url(46d46d583fcef5817304483b6de19b77.webp);
+                background-repeat: repeat;
+                animation: movebg 2s linear infinite;
+            }
+
+            @keyframes movebg{
+                from{
+                    background-position: 0 0;
+                }
+                to{
+                    background-position: 600px 500px;
+                }
             }
         </style>
     </head>
@@ -18,13 +29,13 @@
                 <div class="button-container">
                     <buttn type="button">WELCOME TO ELIJAH'S ARCADE</buttn>
                 </div>
+                <a class="start-button" href="Page-7.html"> all about me</a>
                     <a class="start-button" href="Untitled-1.html"> art</a>
                     <a class="start-button" href="Page-2.html"> math</a>
                     <a class="start-button" href="page-3.html"> writing</a>
                     <a class="start-button" href="Page-4.html">ecs </a>
                     <a class="start-button" href="page-5.html"> health</a>
                     <a class="start-button" href="page-6.html"> spanish</a>
-                    <a class="start-button" href="Page-7.html"> all about me</a>
                 </div>
             </section>
         </main>
