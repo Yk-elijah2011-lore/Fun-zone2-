@@ -8,8 +8,6 @@
 <body>
     <main class="cabinet">
         <section class="screen content-screen">
-            <h1 class="content-heading">PICTURE ZONE</h1>
-            <label class="image-upload" for="pictureInput">INSERT PICTURE</label>
             <input id="pictureInput" class="file-input" type="file" accept="image/*">
             <div class="image-space"><img id="picturePreview" class="image-preview" alt="Your selected picture preview"></div>
             <p class="hint">CHOOSE A PICTURE FROM YOUR COMPUTER</p>
@@ -17,13 +15,7 @@
         </section>
     </main>
     <script>
-        const pictureInput = document.querySelector("#pictureInput");
-        const picturePreview = document.querySelector("#picturePreview");
 
-        pictureInput.addEventListener("change", () => {
-            const picture = pictureInput.files[0];
-            if (picture) picturePreview.src = URL.createObjectURL(picture);
-        });
     </script>
     </div>
                 <div class="button-container">
@@ -61,7 +53,14 @@
                             <span style="font-size: x-large;">spanish</span>
                         </button>
                     </a>
-                        <style>       
+                        <style>    
+                body {
+                    background-image: url(imagesIDL/pro-48ToDq3.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-attachment: fixed;
+                }   
                 .button-container {
                     display: flex;
                     justify-content: center;
@@ -79,6 +78,28 @@
 
                 .hoverbutton:hover {
                     background-color: #45a049;
+                }
+            .button-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+
+                .hoverbutton {
+                    background-color: rgba(162, 242, 241, 0.5);
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    transition: 0.15s;
+                    border-radius: 45px;
+                    margin-left: 2px;
+                    margin-right: 2px;
+                }
+
+                .hoverbutton:hover {
+                    transform: scale(1.1);
                 }
                 </style>
             </div>
