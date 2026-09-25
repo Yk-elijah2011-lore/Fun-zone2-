@@ -6,13 +6,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="cabinet"><section class="screen content-screen">
-        <div class="hud"><span>1UP 000000</span><span>PAGE 03 / 08</span></div>
-        <h1 class="content-heading">ESSAY ZONE</h1>
-        <textarea class="essay-space" aria-label="Essay writing space" placeholder="Write your 6 to 8 paragraph essay here..."></textarea>
-        <nav class="pager"><a href="index.html">◀ BACK</a></nav>
+
    
            </div>
+            <div class="button-container">
+                    <a href="index.html">
+                        <button class="hoverbutton">
+                            <h1>home</h1>
+                        </button>
+                    </a>
                 <div class="button-container">
                     <a href="Page-7.html">
                         <button class="hoverbutton">
@@ -52,35 +54,42 @@
                     <a href="page-8.html">
                         <button class="hoverbutton">
                             <span style="font-size: x-large;">
-                            <h3>project for the year</h3>
+                            <h5>project for the year</h5>
                         </button>
                     </a>
                     </div>
 
-            <style>
-            .button-container {
-                display: flex;
-                gap: 10px;
+             <style>
+            body{
+                 background-image: url(imagesIDL/Ela.gif);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
             }
-            </style>        
-            <style>
-                .button-container {
+
+
+            .button-container {
                     display: flex;
                     justify-content: center;
                     margin-top: 20px;
                 }
 
                 .hoverbutton {
-                    background-color: #4CAF50;
+                    background-color: rgba(162, 242, 241, 0.5);
                     color: white;
                     padding: 10px 20px;
                     border: none;
                     cursor: pointer;
                     transition: background-color 0.3s ease;
+                    transition: 0.15s;
+                    border-radius: 45px;
+                    margin-left: 2px;
+                    margin-right: 2px;
                 }
 
                 .hoverbutton:hover {
-                    background-color: #45a049;
+                    transform: scale(1.1);
                 }
               </style>  
 
